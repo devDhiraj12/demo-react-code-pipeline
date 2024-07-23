@@ -8,4 +8,4 @@ if ! [ -x "$(command -v serve)" ]; then
   sudo npm install -g serve
 fi
 cd /var/www/html
-nohup serve -s build -l 80 &
+ serve -s build -l 80 >/dev/null 2>&1 &
