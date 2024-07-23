@@ -6,9 +6,9 @@ if ! [ -x "$(command -v node)" ]; then
   sudo yum install -y nodejs
 fi
 if ! [ -x "$(command -v serve)" ]; then
-  sudo npm install -g serve
+  sudo npm install -g serve && npm install -g npm@10.8.2
 fi
-cd /var/www/html
+cd /app
 nohup serve -s . -l 80 &
  
  
