@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/html
+    destination: /app
 hooks:
   beforeInstall:
     - location: scripts/set_permissions.sh
@@ -11,8 +11,8 @@ hooks:
   ApplicationStart:
     - location: scripts/start_server.sh
       timeout: 300
-      runas: ec2-user
+      runas: root
   ApplicationStop:
     - location: scripts/stop_server.sh
       timeout: 300
-      runas: ec2-user
+      runas: root

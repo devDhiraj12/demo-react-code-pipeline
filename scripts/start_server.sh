@@ -9,5 +9,5 @@ fi
 if ! [ -x "$(command -v serve)" ]; then
   sudo npm install -g serve
 fi
-cd /var/www/html
+cd /app
 nohup serve -s build -l 80 &
