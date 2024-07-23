@@ -1,14 +1,10 @@
 ---
-version: 0
+version: 0.2
 os: linux
 files:
   - source: /
-    destination: /app
+    destination: /
 hooks:
-  BeforeInstall:
-    - location: ./before_install.sh
-      timeout: 300
-      runas: root
   ApplicationStart:
     - location: ./start_server.sh
       timeout: 300
