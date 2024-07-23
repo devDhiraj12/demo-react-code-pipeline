@@ -3,6 +3,8 @@
 if ! [ -x "$(command -v node)" ]; then
   curl -fsSL https://rpm.nodesource.com/setup_16.x | sudo bash -
   sudo yum install -y nodejs
+  sudo npm install -g npm@10.8.2
+
 fi
 if ! [ -x "$(command -v serve)" ]; then
   sudo npm install -g serve
